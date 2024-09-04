@@ -7,9 +7,9 @@
 Creación del entorno Virtual
 1. Crea una carpeta llamada "djangoApp03"
 2. Abra el cmd y pone el comando que creará un directorio llamado "myvenv" que contiene el entorno virtual:
-   <li>F:\djangoApp03> python -m venv myvenv</li>
+   <ul>F:\djangoApp03> python -m venv myvenv</ul>
 3. Iniciar el entorno virtual:
-   <li>F:\djangoApp03> myvenv\Scripts\activate</li>
+   <ul>F:\djangoApp03> myvenv\Scripts\activate</ul>
 
    
 Instalación Django
