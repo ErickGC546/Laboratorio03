@@ -1,0 +1,51 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>Lista de Propietarios</title>
+</head>
+<body>
+    <h1>Lista de Propietarios</h1>
+    {% if propietarios %}
+    <ul>
+        {% for propietario in propietarios %}
+            <li>
+                <strong>Propietario:</strong> {{ propietario.nombre }} (Apartamento {{ propietario.numero_apartamento }})
+                <ul>
+                    {% if propietario.vehiculos.exists %}
+                        {% for vehiculo in propietario.vehiculos.all %}
+                            <li>
+                                <strong>Vehículo:</strong>
+                                Marca: {{ vehiculo.marca }}, 
+                                Modelo: {{ vehiculo.modelo }}, 
+                                Matrícula: {{ vehiculo.matricula }}, 
+                                Color: {{ vehiculo.color }}
+                                <ul>
+                                    {% if vehiculo.registros.exists %}
+                                        {% for registro in vehiculo.registros.all %}
+                                            <li>
+                                                <strong>Entrada:</strong> {{ registro.fecha_hora_entrada }}<br>
+                                                <strong>Salida:</strong> {{ registro.fecha_hora_salida|default:"No registrado" }}
+                                            </li>
+                                        {% endfor %}
+                                    {% else %}
+                                        <li><em>No hay registros de entrada/salida para este vehículo</em></li>
+                                    {% endif %}
+                                </ul>
+                            </li>
+                        {% endfor %}
+                    {% else %}
+                        <li><em>Este propietario no tiene vehículos registrados</em></li>
+                    {% endif %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p><em>No hay propietarios registrados</em></p>
+    {% endif %}
+</body>
+</html>
+
+
+
