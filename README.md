@@ -1,7 +1,7 @@
 # Laboratorio03
-Requisitos
-Framework: Django 4.x.
-Base de Datos: SQLite.
+<p>Requisitos</p>
+<p>Framework: Django 4.x./<p>
+<p>Base de Datos: SQLite.</p>
 
 
 Creación del entorno Virtual
