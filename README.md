@@ -14,36 +14,36 @@ Creación del entorno Virtual
    
 Instalación Django
 5. En la consola, ejecuta
-   (myvenv)F:\djangoApp03> pip install django
+   <ul>(myvenv)F:\djangoApp03> pip install django</ul>
 6. Prueba la instalación
-   (myvenv)F:\djangoApp03> python -m django --version
-
-   
+   <ul>(myvenv)F:\djangoApp03> python -m django --version</ul>
+<br>
+<br>  
 Proyecto en Django
 7. Ingrese a la carpeta de "lab03" Descargada anteriormente y puesto dentro de la carpeta "djangoApp03"
-   (myvenv)F:\djangoApp03> cd lab03
-
-
+   <ul>(myvenv)F:\djangoApp03> cd lab03</ul>
+<br>
+<br>
 Creación de la base de datos con SQLite3
 8. Crear las tablas en la base de datos, ejecute el siguiente comando:
-   (myvenv)F:\djangoApp03\lab03> python manage.py migrate
+   <ul>(myvenv)F:\djangoApp03\lab03> python manage.py migrate</ul>
 9. Incluir la aplicación gestor, ejecutar el siguiente comando:
-   (myvenv)F:\djangoApp03\lab03> python manage.py makemigrations gestor
+   <ul>(myvenv)F:\djangoApp03\lab03> python manage.py makemigrations gestor</ul>
 10. Para gestionar las migraciones, ejecutar el siguiente comando:
-   (myvenv)F:\djangoApp03\lab03> python manage.py sqlmigrate gestor 0001
+   <ul>(myvenv)F:\djangoApp03\lab03> python manage.py sqlmigrate gestor 0001</ul>
 11. Ejecutar de nuevo el comando “migrate” para crear esas tablas modelos en su base de datos:
-   (myvenv)F:\djangoApp03\lab03> python manage.py migrate
-
-
+   <ul>(myvenv)F:\djangoApp03\lab03> python manage.py migrate</ul>
+<br>
+<br>
 Crear un Superusuario para el Administrador:
-   (myvenv)F:\djangoApp03\lab03> python manage.py createsuperuser
+   <ul>(myvenv)F:\djangoApp03\lab03> python manage.py createsuperuser
      user:erick123
      pasword:123456
-     gmail:erick123@gmail.com
-     
+     gmail:erick123@gmail.com</ul>
+     <br>
 Ejecucion del Proyecto
 12. Ejecute el siguiente comando:
-   (myvenv)F:\djangoApp03\lab03> python manage.py runserver
+   <ul>(myvenv)F:\djangoApp03\lab03> python manage.py runserver</ul>
 
 
 
